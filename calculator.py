@@ -1,3 +1,4 @@
+"""
 A simple calculator to do basic operators. Scientific calculator to be added for more complexity
 """
 import math
@@ -59,6 +60,7 @@ while not correct_input:
         #displaying the menu of operator
         correct_choice = False
         while not correct_choice:
+            #menu display
             choice = int(input("\nEnter:\n1--For Addition(+)\n2--For Substraction(-)\n3--For Multiplication(X)\n4--For Division(/)\n5--For Modulo(%)\n6--For Power(**)\n7--For Factorial(x!)\n8--For Power 2(x^2)\n9--For Power 3(x^3)\n10--For Square Root(x^(1/2))\n11--For Cube Root(x^(1/3))\n12--For Log(log(x))\n13--For Ln(ln(x))\n14--For Euler Power(e^x)\n15--For Cos(cos(x))\n16--For Sin(sin(x))\n17--For Tan(tan(x))\n18--For Acos(acos(x))\n19--For Asin(asin(x))\n20--For Atan(atan(x))\n\n"))
             #if the choice is not between 1 and 5
             if choice in range(1,7):
