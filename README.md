@@ -1,2 +1,2 @@
 # pynippets
-small programs in python
+light weight modules in Python

@@ -8,7 +8,6 @@ def longest_consec(strarr, k):
     if k <= 0:
         for word in strarr[:k]:
             long_first_word.append(word)
-        
         for word in long_first_word:
             concat_word += word
 
