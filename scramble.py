@@ -13,12 +13,11 @@ scramble('katas', 'steak') ==> False
 """
 def scramble(s1, s2):
 
-
-    if all(char in s1 for char in s2):
+    s1_set = set(s1)
+    s2_set = set(s2)
+    if s2_set.issubset(s1_set):
         return True
     else:
         return False
 
-    # your code here
-
-print(scramble('rkqodlw','worldx'))
+print(scramble('scriptingjava', 'javascript'))
