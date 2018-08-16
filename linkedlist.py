@@ -1,22 +1,25 @@
-class Node():
+class Node:
     #initialize the head node to none if not provided and set the next node to none
     def __init__(self,data=None):
         self.data = data
         self.next = None
 
-class Linkedlist():
+class Linkedlist:
     def __init__(self):
-        self.head = Node()
+        self.head = None
 
 
     def append(self,data):
-        #creating the node with the data passed in
-        new_node = Node(data)
-        current_node = self.head
-        while current_node.next is not None:
-            current_node = current_node.next
-        #when we have reached the end of list
-        current_node.next = new_node
+        #if the linkedlist is empty
+        if self.head is None:
+            self.head = Node(data)
+        else:
+            #creating the node with the data passed in
+            current_node = self.head
+            while current_node.next is not None:
+                current_node = current_node.next
+            #when we have reached the end of list
+            current_node.next = Node(data)
 
 
     def display(self):
@@ -25,8 +28,8 @@ class Linkedlist():
         current_node = self.head
 
         while current_node.next is not None:
-            current_node = current_node.next
             node_elements.append(current_node.data)
+            current_node = current_node.next
         print(node_elements)
 
     def length(self):
@@ -66,6 +69,20 @@ class Linkedlist():
                 return
             else:
                 index_count+=1
+
+    def insert_first(self,data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+
+    def remove_first(self):
+        if self.head is not None:
+            delete_node = self.head
+            the_new_head = delete_node.next
+            self.head = the_new_head
+            return delete_node.next.data
+        else:
+            return None
 
 
 
