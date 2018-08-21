@@ -8,7 +8,7 @@ def get_fib(position):
         return get_fib(position-1)+get_fib(position-2)
     elif position == 1 or position == 0:
         return position
-    elif position < 0:
+    else:
         raise Exception("Enter a positive number for the position")
 
 
