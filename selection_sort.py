@@ -10,12 +10,12 @@ def selection_sort(the_list):
     while sorted_len < len(the_list):
         min_index = None
         for i,element in enumerate(the_list[sorted_len:]):
-            #checking if it is the smallest element we have seen yet
-            if min_index==None or element<the_list[min_index]:
+            if min_index == None or element<the_list[min_index]:
                 min_index = i+sorted_len
         the_list[sorted_len],the_list[min_index] = the_list[min_index],the_list[sorted_len]
         sorted_len += 1
     return the_list
+
 
 
 the_list = gen_list()
