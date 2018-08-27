@@ -23,7 +23,7 @@ class HashTable:
             if self.table[hv] != None:
                 self.table[hv].append(string)
             else:
-                self.table[hv] = [string]
+                self.table[hv] = string
 
     def look_up(self,string):
         hv = self.calculate_hash_value(string)
