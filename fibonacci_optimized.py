@@ -41,3 +41,14 @@ def fibonacci_dp(n):
 
 for i in range(101):
     print(i," : ",fibonacci_dp(i))
+    
+#fibonacci using iteration
+def fib_ite(n):
+    a,b = 0,1
+    
+    for _ in range(n):
+        a,b = b, b+a
+    return a
+print(fib_ite(5))
+    
+   
